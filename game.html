@@ -7,6 +7,7 @@
   <title>Game</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍🏫</text></svg>">
 </head>
 <body class="bg-gray-900 ">
   <div class="h-screen flex items-center justify-center flex-col container mx-auto px-4 md:px-0">
@@ -27,18 +28,22 @@
     </div>
     <!-- ANSWERS -->
     <div class="flex w-full md:w-2/3 my-10 gap-4 flex-col">
-      <a href="" class="bg-green-900 hover:bg-green-700 w-full px-3 py-4 text-white text-xl rounded-lg font-medium">
-        10%
-      </a>
-      <a href="" class="bg-green-900 hover:bg-green-700 w-full px-3 py-4 text-white text-xl rounded-lg font-medium">
-        20%
-      </a>
-      <a href="" class="bg-green-900 hover:bg-green-700 w-full px-3 py-4 text-white text-xl rounded-lg font-medium">
-        50%
-      </a>
-      <a href="" class="bg-green-900 hover:bg-green-700 w-full px-3 py-4 text-white text-xl rounded-lg font-medium">
-        35%
-      </a>
+      <div class="choice-container flex gap-4 bg-green-900 hover:bg-green-700 w-full px-3 py-4 text-white text-xl rounded-lg">
+        <p class="choice-prefix">A.</p>
+        <p class="choice-text font-medium">10%</p>
+      </div>
+      <div class="choice-container flex gap-4 bg-green-900 hover:bg-green-700 w-full px-3 py-4 text-white text-xl rounded-lg">
+        <p class="choice-prefix">B.</p>
+        <p class="choice-text font-medium">20%</p>
+      </div>
+      <div class="choice-container flex gap-4 bg-green-900 hover:bg-green-700 w-full px-3 py-4 text-white text-xl rounded-lg">
+        <p class="choice-prefix">C.</p>
+        <p class="choice-text font-medium">50%</p>
+      </div>
+      <div class="choice-container flex gap-4 bg-green-900 hover:bg-green-700 w-full px-3 py-4 text-white text-xl rounded-lg">
+        <p class="choice-prefix">D.</p>
+        <p class="choice-text font-medium">12%</p>
+      </div>
     </div>
   </div>
 </body>
