@@ -64,8 +64,8 @@ getNewQuestion = () => {
   }
 
   questionCounter++
-  progressText.innerText = ’Question ${questionCounter} of ${MAX_QUESTIONS}’
-  progressBarFull.style.width = ‘${(questionCounter/MAX_QUESTIONS) * 100}%’
+  progressText.innerText =  `Question ${questionCounter} of ${MAX_QUESTIONS} `
+  progressBarFull.style.width =  `${(questionCounter/MAX_QUESTIONS) * 100}% `
 
 
   const questionsIndex = Math.floor(Math.random() * availableQuestions.lenght)
@@ -94,5 +94,19 @@ choices.forEach(choice =>  {
     if(classToApply === 'correct'){
       incrementScore(SCORE_POINTS)
     }
+
+    selectedChoice.parentElement.classList.add(classToApply)
+
+    setTimeout(() => {
+      selectedChoice.parentElement.classList.remove(classToApply)
+      getNewQuestion()
+    }, 1000)
   })
 })
+
+incrementScore = num => {
+  score +=num
+  scoreText.innerText = score
+}
+
+startGame()
