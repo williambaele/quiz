@@ -14,15 +14,15 @@
     <div class="flex flex-col" id="end">
       <div class="grid gap-8 my-8">
         <h2 class="text-5xl font-medium text-white text-center">Your score</h2>
-        <h1 class="text-4xl text-white font-medium text-center italic" id="final-score">0</h1>
+        <h1 class="text-4xl text-white font-medium text-center italic" id="finalScore">0</h1>
       </div>
       <form class="end-form-container grid gap-4">
         <h2 class="text-xl font-medium text-white text-center" id="end-text">Enter your name to save your score</h2>
         <input class="py-2 rounded-lg pl-2" type="text" name="name" id="username" placeholder="Enter your name">
-        <button class="bg-gray-500 py-2 rounded-lg font-medium hover:bg-gray-400" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
+        <button class="bg-gray-500 hover:bg-gray-400 py-2 rounded-lg font-medium hover:bg-gray-400" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
       </form>
-      <a href="/highscores.html" class="mt-4 btn bg-[#B9D6F2] py-2 text-center rounded-lg cursor-pointer text-gray-900 font-medium">Leaderboard</a>
-      <a href="/game.html" class="mt-4 btn bg-[#B9D6F2] py-2 text-center rounded-lg cursor-pointer text-gray-900 font-medium">Play again</a>
+      <a href="/highscores.html" class="mt-4 btn bg-yellow-400 hover:bg-yellow-300 py-2 text-center rounded-lg cursor-pointer text-gray-900 font-medium">Leaderboard</a>
+      <a href="/game.html" class="mt-4 btn bg-gray-500 hover:bg-gray-400 py-2 text-center rounded-lg cursor-pointer text-gray-900 font-medium">Play again</a>
     </div>
   </div>
   <script src="end.js"></script>
