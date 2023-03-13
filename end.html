@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍🏫</text></svg>">
+  </head>
+<body class="bg-gray-900">
+  <div class="h-screen flex items-center justify-center flex-col container mx-auto px-4 md:px-0">
+    <div class="flex flex-col" id="end">
+      <div class="grid gap-8 my-8">
+        <h2 class="text-5xl font-medium text-white">Your score</h2>
+        <h1 class="text-4xl text-white font-medium text-center italic" id="final-score">0</h1>
+      </div>
+      <form class="end-form-container grid gap-4" action="">
+        <input class="py-2 rounded-lg pl-2" type="text" name="name" id="username" placeholder="Enter your name">
+        <button class="bg-gray-500 py-2 rounded-lg font-medium hover:bg-gray-400 cursor-pointer" id="saveScoreBtn" type="submit" onClick="saveHighScore(event)" disabled>Save</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
