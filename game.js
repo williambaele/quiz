@@ -1,6 +1,6 @@
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
-const progessText = document.querySelector('#progressText');
+const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
@@ -57,16 +57,15 @@ startGame = () => {
 }
 
 getNewQuestion = () => {
-  if(availableQuestions.lenght === 0 || questionCounter > MAX_QUESTIONS) {
+  if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
     localStorage.setItem('mostRecentScore', score)
 
     return window.location.assign('/end.html')
   }
 
   questionCounter++
-  progressText.innerText =  `Question ${questionCounter} of ${MAX_QUESTIONS} `
-  progressBarFull.style.width =  `${(questionCounter/MAX_QUESTIONS) * 100}% `
-
+  progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
+  progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`
 
   const questionsIndex = Math.floor(Math.random() * availableQuestions.lenght)
   currentQuestion = availableQuestions[questionsIndex]
@@ -81,17 +80,17 @@ getNewQuestion = () => {
   acceptingAnswers = true
 }
 
-choices.forEach(choice =>  {
+choices.forEach(choice => {
   choice.addEventListener('click', e => {
-    if(!acceptingAnswers) return
+    if (!acceptingAnswers) return
+
     acceptingAnswers = false
     const selectedChoice = e.target
-    const selectedAnswer = selectedChoice.dataset['number']
+    const selectedAnswer = selectedChoice.dataset.number
 
-    let classToApply = selectedAnwser == currentQuestion.answer ? 'correct' :
-    'incorrect'
+    const classToApply = selectedAnswer == currentQuestion.answer ? 'bg-green-500' : 'bg-red-500'
 
-    if(classToApply === 'correct'){
+    if (classToApply === 'bg-green-500') {
       incrementScore(SCORE_POINTS)
     }
 
@@ -105,7 +104,7 @@ choices.forEach(choice =>  {
 })
 
 incrementScore = num => {
-  score +=num
+  score += num
   scoreText.innerText = score
 }
 
